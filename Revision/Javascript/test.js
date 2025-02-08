@@ -97,11 +97,22 @@
 // greet();
 // console.log(name); // Output: "John" (outer scope variable is used)
 
-const object1 = {
-  name: "Saumya",
-  // age: 22,
-  dob: "10 Dec 2002"
+
+// console.log(add(2, 3));  // ✅ Works fine due to hoisting
+
+// function add(a, b) {
+//   return a + b;
+// }
+
+// console.log(subtract(5, 2)); // ❌ ReferenceError: Cannot access 'subtract' before, The error would have been it is not a function if declared using var
+
+// const subtract = function(a, b) {
+//   return a - b;
+// };
+
+let value;
+if (value === null) {
+  console.log("Value is null");
+} else if (value === undefined) {
+  console.log("Value is undefined");
 }
-
-console.log(object1.age);
-
