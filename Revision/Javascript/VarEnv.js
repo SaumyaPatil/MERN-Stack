@@ -1,5 +1,3 @@
-
-
 //Function invocation and variable environment
 //The execution context is seperately running that is independant of each other. They have their own memory space, virtual environment where they run.
 
