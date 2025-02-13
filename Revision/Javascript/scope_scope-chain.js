@@ -13,12 +13,25 @@
 //When a local exection context is created, you also get access to the lexical environment of its parent along with the local memory.
 //Scope chain is the chain of the lexical environments and its parent references. This mechanism is called scope chain.
 
+// function a(){
+//     var b = 10;
+//     c();
+//     function c(){
+//         console.log(b);
+//     }
+// }
+// a();
+// console.log(b);
+
 function a(){
-    var b = 10;
+    function k(){
+        let b = 10;
+    }
+    k();
     c();
     function c(){
         console.log(b);
     }
 }
 a();
-console.log(b);
+
