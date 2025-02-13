@@ -17,7 +17,7 @@
 //     console.log(x);
 // }
 
-//JS still creates an empty file and sets up the memory space.
+//When the file is empty, JS still creates an execution context and sets up the memory space.
 //Whenever an execution context is created, this keyword is also created along with it. Even for the functional execution contexts. Also the global space is set up
 //At global level this points to global object that is window object in case of browsers. We can access the methods and the variables defined inside the object anywhere in our programme.
 //When you run a js programme, a global exection context is created and a global space is created. Any variable or function is said to be in global space if it is not inside any function.
