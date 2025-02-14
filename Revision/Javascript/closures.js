@@ -11,8 +11,8 @@ function x(){
         console.log(a);
         return z;
     }
-    y();
+    const answer = y();
+    return answer;
 }
 const innerCase = x();
-
-
+console.log(innerCase());
