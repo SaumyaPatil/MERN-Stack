@@ -65,17 +65,44 @@
 //and many more...
 
 //Interview questions related to closures
-function x(){
-    {
-        let i = 1;
-        console.log("Hiii");
-    }
+// function x(){
+//     {
+//         let i = 1;
+//         console.log("Hiii");
+//     }
     
-    setTimeout(function (){
-        console.log(i);
-    }, 3000);
-    let i=5;
-    console.log("Namaste Javascript");
+//     //Yahaape vo kaise pakdega reference to 'i' since vo kaahi aur execute ho raha hai aur i baadme declare hua hai?
+//     setTimeout(function (){
+//         console.log(i);
+//     }, 3000);
+//     let i=5;
+//     console.log("Namaste Javascript");
+// }
+// x();
+
+
+//Yahaape i reassign nahi hoti kya? This is in contradiction to the previous statement.
+// function x(){
+//     for(let i=1; i<=5; i++){
+//         setTimeout(function(){
+//             console.log(i);
+//         }, i*1000);
+//     }
+//     console.log("Namaste Javascript!");
+// }
+// x();
+
+//Here you have to use var only and print from 1-5 in every 1 second
+function j(){
+    for(var i=1; i<=5; i++){
+        function caller(i){
+            setTimeout(function(){
+                console.log(i);
+            }, i*1000);
+        }
+        console.log(caller(i));
+    }
+    console.log("Namaste Javascript!");
 }
-x();
+j();
 
