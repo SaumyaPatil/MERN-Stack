@@ -37,22 +37,22 @@
 
 // secondOuterFunction();
 
-function z(){
-    var b = 200;
-    function x(){
-        var a = 9;
-        function y(){
-            console.log(a, b);
-        }
-        // y();
-        return y;
-    }
-    const returnAns = x(); //the variable a local to this function is retained cause its scope is functional
-    a = 30;    //scope of this variable is global
-    return returnAns;
-}
-const ans = z();
-ans();
+// function z(){
+//     var b = 200;
+//     function x(){
+//         var a = 9;
+//         function y(){
+//             console.log(a, b);
+//         }
+//         // y();
+//         return y;
+//     }
+//     const returnAns = x(); //the variable a local to this function is retained cause its scope is functional
+//     a = 30;    //scope of this variable is global
+//     return returnAns;
+// }
+// const ans = z();
+// ans();
 
 //Uses of closures
 //Module design pattern
@@ -63,3 +63,19 @@ ans();
 //setTimeouts
 //Iterators
 //and many more...
+
+//Interview questions related to closures
+function x(){
+    {
+        let i = 1;
+        console.log("Hiii");
+    }
+    
+    setTimeout(function (){
+        console.log(i);
+    }, 3000);
+    let i=5;
+    console.log("Namaste Javascript");
+}
+x();
+
