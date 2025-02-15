@@ -197,37 +197,49 @@
 
 // counter();
 
-let i = 8; 
-while (i <= 10) {
-//   console.log(i);
-  k=10;
-  console.log(k);
-  i++;
-}
-// console.log(i);
-console.log(k);
+// let i = 8; 
+// while (i <= 10) {
+// //   console.log(i);
+//   k=10;
+//   console.log(k);
+//   i++;
+// }
+// // console.log(i);
+// console.log(k);
 
-counter1.incrementCounter();
-counter1.incrementCounter();
-counter1.decrementCounter();
+// counter1.incrementCounter();
+// counter1.incrementCounter();
+// counter1.decrementCounter();
 
 //How to make the above code scalable by not just making it increment counter but also decrement counter.
-function Counter(){
-    var count=0;
-    this.incrementCounter = function(){
-        count++;
-        console.log(count);
-    }
-    this.decrementCounter = function(){
-        count++;
-        console.log(count);
-    }
-}
+// function Counter(){
+//     var count=0;
+//     this.incrementCounter = function(){
+//         count++;
+//         console.log(count);
+//     }
+//     this.decrementCounter = function(){
+//         count++;
+//         console.log(count);
+//     }
+// }
 
-var counter1 = new Counter();
-counter1.incrementCounter();
-counter1.decrementCounter();
+// var counter1 = new Counter();
+// counter1.incrementCounter();
+// counter1.decrementCounter();
 
+//Disadvantages of closures - 
 //Overconsumption of memory. Those closed over variables are not garbage collected till the program expires. 
 //If not handled properly it may lead to memory leaks.
 //The memory is accumulated overtime and may freez browser if not handled properly.
+
+//Garbage collector - 
+//It is a program in JS engine or browser that frees up the unutilised memory.
+//JS is high level programming language, so most of the work is done by JS engine. 
+//Theres inbuilt garbage collector which frees up the memory.
+
+//In languages like C++, Java, etc. the allocation and deallocation is done manually but is not the case with JS.
+//The modern browsers or the V8 engine have smart garbage collection mechanisms where they find that these variables are unreachable and they smartly collects them.
+//By smartly collects means if we have some variable that is no longer in use later even after the function is returned, it is garbage collected as it is not accessible by any ways later.
+
+
