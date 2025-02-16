@@ -18,6 +18,6 @@ console.log("End");
 //There are api calls present in the microtask queue as well as mutation observer. It observes the changes in the DOM tree.
 //Callback queues are also known as task queue.
 
+//STARVATION
 //Due to many pending callbacks inside the microtask queue, we might not get a chance to execute the tasks inside the callback queue.
-
 
