@@ -198,7 +198,7 @@
 // console.log(gender);
 
 //This is spread operator
-// const givenArray1 = [1, 2, 3, 4];
-// const givenArray2 = [...givenArray1];
-// console.log(givenArray2);
+const givenArray1 = [1, 2, 3, 4];
+const givenArray2 = [...givenArray1];
+console.log(givenArray2);
 
