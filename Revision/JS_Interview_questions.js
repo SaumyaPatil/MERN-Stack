@@ -147,11 +147,11 @@
 // clearInterval stops further execution
 
 //Why does the calls overlap here?
-function repeatWithDelay(){
-    console.log("Executed...");
-    setInterval(repeatWithDelay, 2000);
-}
-jfjfj
+// function repeatWithDelay(){
+//     console.log("Executed...");
+//     setInterval(repeatWithDelay, 2000);
+// }
+
 // repeatWithDelay();
 
 
