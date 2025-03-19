@@ -7,21 +7,24 @@
 // console.log(typeof Symbol('symbol')); // Returns Symbol
 
 
-// //Symbol data-type
+//Symbol data-type
 // var symbol1 = Symbol('symbol');
 // var symbol2 = Symbol('symbol');
 // console.log(symbol1 == symbol2);  //this gives false since the values are unique
 
+//Non-primitive data-types
 // Collection of data in key-value pairs
 var obj1 = {
     x: 43,
     y: "Hello world!",
     z: function(){
-    return this.x;
+        //Why is this keyword or object name necessary otherwise it gives reference error that 'x' is not defined?
+        return x;
     }
-    }
-    // Collection of data as an ordered list
-    var array1 = [5, "Hello", true, 4.1];
+}
+
+// Collection of data as an ordered list
+var array1 = [5, "Hello", true, 4.1];
 
 // console.log(obj1);
 
