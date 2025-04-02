@@ -1,6 +1,7 @@
+
+//Ye statement likha hai taaki jab kalko return ke andr ka html code convert hoga react mein tab vo yahaase leiga method.
 import React, { useState } from 'react' 
 import Products from './Products';
-//Ye statement likha hai taaki jab kalko return ke andr ka html code convert hoga react mein tab vo yahaase leiga code.
 
 function App() {
   //useState function returns two values which is destructured as a -> value and b -> function to update that value
@@ -13,7 +14,7 @@ function App() {
     //   </div>
     // </div>
     <div className='w-full h-screen bg-zinc-900 text-white p-5'>
-      {/* Ye jsx h1 hai toh haam doc.QuerySelector nahi kar sakte kyuki ye convert nahi hota usme */}
+      {/* Ye jsx h1 hai toh haam doc.QuerySelector nahi kar sakte kyuki ye convert hota hai React.createElement me toh uspe ye code work nai krega */}
       {/* <h1>{a}</h1> */}
       <button onClick={()=>b(a+1)} className='px-3 py-1 bg-green-500 rounded-md text-xs'>Click</button> 
 
