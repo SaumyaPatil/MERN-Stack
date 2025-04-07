@@ -1,3 +1,5 @@
+// Data-types 
+
 // console.log(typeof "John Doe"); // Returns "string"
 // console.log(typeof 3.14); // Returns "number"
 // console.log(typeof true); // Returns "boolean"
