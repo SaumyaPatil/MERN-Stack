@@ -7,3 +7,4 @@ console.log(a);
 console.log(x);
 console.log(window.a);
 console.log(this.a);
+  
