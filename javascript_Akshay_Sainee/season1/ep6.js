@@ -9,3 +9,7 @@ else{
     console.log("a is not undefined");
 }
 
+a = "Saumya";
+console.log(a);
+a = true;
+console.log(a);
