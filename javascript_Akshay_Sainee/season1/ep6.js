@@ -13,3 +13,6 @@ a = "Saumya";
 console.log(a);
 a = true;
 console.log(a);
+a = undefined;
+console.log(a);
+
