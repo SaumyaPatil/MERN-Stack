@@ -50,7 +50,7 @@
 //  Uses of Closures
 //  Module Design Pattern
 //  Currying
-//  Functions like once - something inside the function remembers how many times it has been run.
+//  Functions like once - It returns a function that can only run once. Something inside the function remembers how many times it has been run.
 //  memoize
 //  maintaining state in async world
 //  setTimeouts
