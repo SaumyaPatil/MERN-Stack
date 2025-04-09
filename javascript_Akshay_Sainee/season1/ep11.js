@@ -1,4 +1,4 @@
-//JS is non blocking, the setTimeout function takes the callback, stores it somewhere else with reference to 'i' and attaches a timer to it.
+//JS is non blocking, the setTimeout function takes the callback, stores it somewhere else with reference to 'i' and attaches a timer to it and executes further.
 
 function x(){
     var i=1;
