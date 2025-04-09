@@ -63,3 +63,11 @@ console.log(v(function(){
 }));
 
 //Functions are first class citizens means the same thing that they have the ability to be used as values.
+
+
+//What if we assign functions to let or const variable, they will behavee the same way as normal let and const variables. They will be in TDZ untill the line of declaration is encountered.
+
+
+//Function statements, declarations and expressions can be written using arrow functions which is part of ES6 introduced in 2015.
+//let and const is also feature of ES6
+
