@@ -49,6 +49,8 @@ b(1, 2); //These are arguements
 //First class functions - the ability of functions to be used as values
 //Functions can be passed as arguements. We can declare the function and pass the function name
 //We can also return a function from a function. (both named and anonymous)
+
+//It is a programming concept in lot of other languages also.
 var v = function(param1){
     console.log(param1);
 
@@ -60,3 +62,4 @@ console.log(v(function(){
 
 }));
 
+//Functions are first class citizens means the same thing that they have the ability to be used as values.
