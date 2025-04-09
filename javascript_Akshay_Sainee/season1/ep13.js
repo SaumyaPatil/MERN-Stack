@@ -46,12 +46,17 @@ var b = function(param1, param2){
 b(1, 2); //These are arguements
 
 
-//First class functions
+//First class functions - the ability of functions to be used as values
 //Functions can be passed as arguements. We can declare the function and pass the function name
+//We can also return a function from a function. (both named and anonymous)
 var v = function(param1){
     console.log(param1);
-}
-v(function(){
 
-})
+    return function(){
+
+    }
+}
+console.log(v(function(){
+
+}));
 
