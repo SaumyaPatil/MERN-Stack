@@ -97,3 +97,38 @@ var counter2 = counter();
 counter2();
 counter2();
 
+
+//To make the above code scalable we can create a constructor function which creates function when called
+function Counter(){
+    var count=0;
+    this.incrementCounter = function(){
+        count++;
+        console.log(count);
+    }
+
+    this.decrementCounter = function(){
+        count--;
+        console.log(count);
+    }
+}
+
+//This will let us access the increment and decrement counter functions
+var count1 = new Counter();
+count1.incrementCounter();
+count1.decrementCounter();
+
+
+//The relation between garbage collectors and closure is such that in modern browsers, the garbage collector works smartly.
+//It smartly frees up memory of z and retains that of x as x is accessed by the inner function
+
+function outer(){
+
+    var x = 10, z = 30;
+    function inner(){
+        console.log(x, z);
+    }
+    return inner;
+}
+
+outer()();
+
