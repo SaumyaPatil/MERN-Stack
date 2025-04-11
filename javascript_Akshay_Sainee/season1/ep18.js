@@ -79,7 +79,7 @@ console.log(calculations(radius2, diameter));
 
 
 //Here the map function maps every element of the array with some logic and that logic is what we pass. It returns an array.
+//Internally it creates an array, iterates over the given array and runs the logic on every element of the given array. Finally returning output.
 //Its exactly similar to calculations function above
 console.log(radius.map(area));
-
 
