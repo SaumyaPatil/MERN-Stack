@@ -83,3 +83,18 @@ console.log(calculations(radius2, diameter));
 //Its exactly similar to calculations function above
 console.log(radius.map(area));
 
+console.log(calculations(radius2, area));
+
+//To make it call exactly the same way, we can add the calculate function in array.prototype so that it becomes available on all the arrays in our code.
+Array.prototype.calculations = function (logic){
+    const output = [];
+    for(let i=0; i<this.length; i++){
+        output.push(logic(this[i]));
+    }
+    return output;
+}
+
+//To make it more similar we can. This will point to the array over which calculations is being called upon
+console.log(radius2.calculations(area));
+
+//Since calculations is similar to map, it is a pollyfill for map.
