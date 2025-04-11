@@ -95,16 +95,31 @@
 // }, 0); //Considering that the array would be non empty with positive values so the least possible value would be 0
 // console.log(output8);
 
-//This is some data that we get from API. List of users
+// //This is some data that we get from API. List of users
 const users = [
     {firstName: "Akshay", lastName: "Sainee", age: 26},
     {firstName: "Saumya", lastName: "Patil", age: 22},
     {firstName: "Siddhi", lastName: "Patil", age: 17},
 ]
 
-//Find list of full names of all these users
-const output9 = users.map(function (x){
-    return x.firstName + " " + x.lastName;
-})
-console.log(output9);
+// //Find list of full names of all these users
+// const output9 = users.map(function (x){
+//     return x.firstName + " " + x.lastName;
+// })
+// console.log(output9);
+
+//How many users have a particular age
+//{ 26 : 1, 22 : 1, 17 : 1}
+const output10 = users.reduce(function(acc, curr){
+    if(acc[curr.age])acc[curr.age]++;
+    else acc[curr.age] = 1;
+    return acc;
+}, {});
+console.log(output10);
+
+//Find the first names of those whose age is < 25
+//We can chain map filter and reduce
+//Here the x inside map will be the elements of the resultant array from filter function
+const output11 = users.filter(x => x.age < 25).map(x => x.firstName);
+console.log(output11);
 
