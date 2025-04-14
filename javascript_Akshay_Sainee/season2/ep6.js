@@ -86,3 +86,4 @@ obj2.x();
 //this inside DOM elements => reference to HTML elements
 //look into index.html
 
+//this behaviour inside class, constructor
