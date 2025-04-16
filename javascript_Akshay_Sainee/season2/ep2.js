@@ -1,39 +1,30 @@
-
-
-//Here, the functions createOrder and proceedToPayment are asynchronous and dependant on each other.
+//Here, the apis createOrder and proceedToPayment are asynchronous and dependant on each other.
 const cart = ["shoes", "pants", "kurtis"];
 
-createOrder(cart);          //orderId
+createOrder(cart);          //creates order in DB and gives an orderId
 
-//This will return a promise
+//This will take orderId and take us to payment page
 proceedToPayment(orderId);
 
 //The above code using callbacks
 const cart1 = ["shoes", "pants", "kurtis"];
 
-createOrder(cart1, function(){
+createOrder(cart1, function(orderId){
     proceedToPayment(orderId);
 });          
+//Here the problem is inversion of control. 
 
-
-//Here the problem is inversion of control. To resolve this issue, we have concept of promise
+// To resolve this issue, we have concept of promise
 const cart2 = ["shoes", "pants", "kurtis"];
 
-const promise = createOrder(cart2);          //orderId
+//Since, the api is async operation, we dont know how much time it will take, this will return a promise as soon as this line is run. Promise is nothing but an empty object with some data value in it. This data value will hold whatever the api returns.
+const promise = createOrder(cart2);          //{data: }
 
-//This will return a promise
 // {data: undefined} -> Here, we have empty object with data property in it which is undefined at the moment.
-// After some time (5/6 seconds, it will fill the value with the returned data by the function)
+// After some time (5/6 seconds, it will fill the data value with the returned data by the function)
 promise.then(function(orderId){
     proceedToPayment(orderId);
 });
-
-// Here, we havee attached a then function to the promise object, when the promise object will be filled with orderDetails, this callback function inside then method will be called.
-// In the previous example we were passing callback function to another function and blindly trusting the other function. While, in this example we are attaching a function to promise object.
-// We have control of the program as it will first get details whenever it wants and then the function will be called once it gets the data.
-// There is gurantee that the function will be called and just once whenever there is data inside the createOrder function
-
-
 
 // Promise object
 
