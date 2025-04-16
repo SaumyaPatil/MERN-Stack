@@ -17,7 +17,8 @@ createOrder(cart1, function(orderId){
 // To resolve this issue, we have concept of promise
 const cart2 = ["shoes", "pants", "kurtis"];
 
-//Since, the api is async operation, we dont know how much time it will take, this will return a promise as soon as this line is run. Promise is nothing but an empty object with some data value in it. This data value will hold whatever the api returns.
+//Since, the api is async operation, we dont know how much time it will take, this will return a promise as soon as this line is run. 
+//Promise is nothing but an empty object with some data value in it. This data value will hold whatever the api returns.
 const promise = createOrder(cart2);          //{data: }
 
 // {data: undefined} -> Here, we have empty object with data property in it which is undefined at the moment.
@@ -26,9 +27,9 @@ promise.then(function(orderId){
     proceedToPayment(orderId);
 });
 
-// Promise object
+// Promise object - How real promise object looks like
 
-// fetch function is the function used to make api calls. It returns us a promise
+// fetch function is the function used to make api calls to servers. It returns us a promise
 // const GITHUB_API = "https://api.github.com/users/akshaymarch7";   //open source api gives info of username
 // const user = fetch(GITHUB_API);
 
@@ -37,23 +38,12 @@ promise.then(function(orderId){
 
 console.log(user);
 //When JS executes this statement its in pending state. And JS just executes and moves further as per its nature.
-//After some time, it gets the data and state becomes fulfilled. So it shows the current state. And promiseResult holds the current data.
+//After some time, it gets the data and state becomes fulfilled. So it shows the current state as fulfilled. And promiseResult holds the current data.
 
 //There is this callback attached to user object. What ever we have to do after having data inside user object goes here.
 user.then(function(data){
     console.log(data);
 });
-
-//The promise object can only be resolved once and states can be fulfilled, rejected or pending.
-//Promise objects are immutable. When theres data inside the object, you can pass it in code and use it. It cant be edited.
-//Hence, you can have control over the data and theres a way to attach handlers to it using then
-
-//What is a promise? How to answer in interviews?
-//It is a placeholder for a period of time untill we recieve some value from the async operation.
-//A container for future value.
-
-//A promise is an object representing eventual completion of an async operation.
-
 
 //Problem of callback hell
 const cart3 = ["shoes", "kurtis", "pants"];
@@ -78,7 +68,8 @@ createOrder(cart4, function(orderId){
 
 
 //Here the code is growing horizontally instead of vertically, this is known as pyramid of doom.
-//This can be handled using promise chaining
+//Code becomes ugly and hard to maintain.
+//This can be handled using promise chaining.
 createOrder(cart4)
 .then(function(orderId){
     return proceedToPayment(orderId);
@@ -89,11 +80,7 @@ createOrder(cart4)
 .then(function(){
     return updateWalletBalance();
 })
-
-//To pipe the data or to maintain sequential flow of data in data chain. Like for example in the above code, meaning the data should flow in sequence down the chain we return a promise from a promise when we are chaining it.
-//Thats when we get data properly into our chain. We use arrow functions instead of normal functions in the above code to have readability.
-
-
+ 
 //Recap
 //We can handle async code using callbacks.
 //Theres a major issue using callback that is inversion of control.
@@ -113,4 +100,8 @@ createOrder(cart4)
 //If theres some promise inside the promise chain, you need to return it to prevent loss of data.
 
 //Here we have talked about how we can consume a promise. How to handle async operation returning a promise.
+
+//HW
+//What is exact defination of promise?
+//Why promises are important?
 
