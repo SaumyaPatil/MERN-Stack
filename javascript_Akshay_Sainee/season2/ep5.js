@@ -70,7 +70,7 @@ const p1 = new Promise(function(res, rej){
 const p2 = new Promise(function(res, rej){
     // setTimeout(() => res("Second promise resolved"), 1000);
     setTimeout(() => rej("Second promise rejected"), 1000);
-}, 1000)
+})
 
 const p3 = new Promise(function(res, rej){
     // setTimeout(() => res("Third promise resolved"), 2000);
