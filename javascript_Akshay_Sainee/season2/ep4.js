@@ -2,10 +2,10 @@
 * What is async?
 * What is await?
 * How async await works behind the scenes
-* Examples of using async/await
+* Examples of async/await in real life
 * Error handling
 * Interviews
-* Async await vs Promise.then/.catch
+* Async await vs Promise.then().catch()
 */
 
 
@@ -27,14 +27,17 @@
 //     res("Promise resolved value!!");
 // });
 
+// async function getData1() {
+//     return p;
+// }
+
 // //always returns a promise
-// const dataPromise1 = getData();
+// const dataPromise1 = getData1();
 // console.log(dataPromise1);
 
 // dataPromise1.then((res) => console.log(res));
 // //The above statement can be written as
 // // p.then((res) => console.log(res));
-
 
 
 
