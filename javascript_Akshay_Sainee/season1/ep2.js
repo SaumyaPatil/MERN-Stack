@@ -7,4 +7,3 @@ function square(num){
 var square2 = square(n);
 var square4 = square(4);
 
-
