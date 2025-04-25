@@ -8,7 +8,7 @@ function App() {
   const[isLoggedin, setLoggedin] = useState(false);
 
   //On basis of some condition you want to show UI, you have shown it beforehand itself
-  //Early return - if this becomes true, then the condition will be executed and LoginBtn code will be returned
+  //Early return - if this becomes true, then the condition will be executed and LoginBtn will be shown, the code will return from here itself, code below wont run at all.
   if(!isLoggedin){
     return(
       <LoginBtn/>
