@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       {/* The code written in JSX format is rendered (code is converted to view on UI) */}
-      <p>Hello ji! My name is Love Babbar!</p>
+      <p>Hello Ji! My name is Love Babbar!</p>
     </>
   )
 }
