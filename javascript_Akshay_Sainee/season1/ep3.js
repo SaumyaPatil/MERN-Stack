@@ -1,15 +1,39 @@
+//Example 1
+// var x = 7;
 
-getName();
-console.log(x);
-console.log(getName);
+const { get } = require("lodash");
 
-var x = 7;
+// function getName(){
+//     console.log("Namaste Javascript!");
+// }
 
-function getName(){
-    console.log("Namaste Javascript!");
-}
+// getName();
+// console.log(x);
 
-getName();
-console.log(x);
-console.log(getName);
+//Example 2
+// var x = 7;
+
+// function getName(){
+//     console.log("Namaste Javascript!");
+// }
+
+// getName();
+// console.log(x);
+
+//Example 3
+// getName();
+// console.log(x);
+// function getName(){
+//     console.log("Namaste Javascript!");
+// }
+
+//Example 4
+// getName();
+// console.log(x);
+// console.log(getName);
+// function getName(){
+//     console.log("Namaste Javascript!");
+// }
+
+// console.log(getName);
 
