@@ -1,22 +1,16 @@
 //Example 1
-// var x = 7;
-
-const { get } = require("lodash");
-
-// function getName(){
-//     console.log("Namaste Javascript!");
-// }
-
-// getName();
-// console.log(x);
+var x = 7;
+function getName(){
+    console.log("Namaste Javascript!");
+}
+getName();
+console.log(x);
 
 //Example 2
 // var x = 7;
-
 // function getName(){
 //     console.log("Namaste Javascript!");
 // }
-
 // getName();
 // console.log(x);
 
